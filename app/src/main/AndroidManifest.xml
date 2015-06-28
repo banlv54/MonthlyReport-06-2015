@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rayleigh.monthlyreport_06_2015" >
     <uses-sdk
-        android:minSdkVersion="13"
+        android:minSdkVersion="21"
         android:targetSdkVersion="22" />
     <uses-permission android:name="android.permission.INTERNET" />
     <application

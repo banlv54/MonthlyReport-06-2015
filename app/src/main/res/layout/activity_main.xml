@@ -28,9 +28,10 @@
         android:id="@+id/imageView"
         android:src="@drawable/fr_logo"
         android:layout_below="@+id/textView"
-        android:minWidth="300px"
+        android:minWidth="350px"
         android:layout_toRightOf="@+id/button"
-        android:layout_toEndOf="@+id/button" />
+        android:layout_toEndOf="@+id/button"
+        android:visibility="invisible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -107,5 +108,22 @@
         android:layout_alignBaseline="@+id/textView2"
         android:layout_alignBottom="@+id/textView2"
         android:layout_centerHorizontal="true" />
+
+    <SurfaceView
+        android:layout_width="500px"
+        android:layout_height="500px"
+        android:id="@+id/surfaceView"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="EDITER LE VAN BAN"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_red_light" />
 
 </RelativeLayout>
