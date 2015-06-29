@@ -6,4 +6,7 @@
 
     <string name="next">Next</string>
     <string name="back">Back</string>
+
+    <string name="v_up">Volume Up</string>
+    <string name="v_down">Volume Down</string>
 </resources>

@@ -48,6 +48,8 @@ public class MainActivity extends ActionBarActivity {
     int currentIndex = 0;
     TypedValue value;
     AssetFileDescriptor afd;
+    int MAX_VOLUME = 5;
+    int volume = 2;
 
     public static int oneTimeOnly = 0;
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -234,7 +236,7 @@ public class MainActivity extends ActionBarActivity {
                         mediaPlayer.prepare();
                     }
                     mediaPlayer.start();
-//                    Toast.makeText(this, song_name, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, song_name, Toast.LENGTH_LONG).show();
                     updateTime(song_name);
                 } catch (IOException e) {
                     Log.e("Loi next", e.getMessage(), e);
@@ -266,7 +268,23 @@ public class MainActivity extends ActionBarActivity {
                     Log.e("Loi next", e.getMessage(), e);
                     e.printStackTrace();
                 }
-//                Toast.makeText(this, "Back", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Back", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.v_up:
+                if (volume < MAX_VOLUME) {
+                    volume += 1;
+                }
+                float v = (float)volume / (float)MAX_VOLUME;
+                mediaPlayer.setVolume(v, v);
+                Toast.makeText(this, volume + "", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.v_down:
+                if (volume > 0){
+                    volume -= 1;
+                }
+                float v2 = (float)volume / (float)MAX_VOLUME;
+                mediaPlayer.setVolume(v2, v2);
+                Toast.makeText(this, volume + "", Toast.LENGTH_LONG).show();
                 return true;
         }
         return false;

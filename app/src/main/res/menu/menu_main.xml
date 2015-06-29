@@ -13,4 +13,14 @@
         android:orderInCategory="100"
         app:showAsAction="never"
         android:title="@string/back"/>
+    <item
+        android:id="@+id/v_up"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/v_up"/>
+    <item
+        android:id="@+id/v_down"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/v_down"/>
 </menu>
